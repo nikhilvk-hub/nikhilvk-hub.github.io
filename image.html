@@ -1,18 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>image search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google Image Search</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links{
+                display:flex;
+                justify-content: flex-end;
+                padding: 15px 20px;
+            }
+            .nav-links a {
+                text-decoration: none;
+                color: rgba(0,0,0,0.87);
+                font-size: 13px;
+            }
+            .nav-links a:hover {
+                text-decoration: underline;
+            }
+                .search-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 120px;
+                }
+                .logo {
+                    font-size: 90px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .logo span:nth-child(1) { color: #4285F4; }
+                .logo span:nth-child(2) { color: #EA4335; }
+                .logo span:nth-child(3) { color: #FBBC05; }
+                .logo span:nth-child(4) { color: #4285F4; }
+                .logo span:nth-child(5) { color: #34A853; }
+                .logo span:nth-child(6) { color: #EA4335; }
+                .sub-text {
+                    color:#4285F4;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+                .search-box {
+                    width: 500px;
+                    padding: 12px 20px;
+                    font-size: 16px;
+                    border: 1px solid #dfe1e5;
+                    border-radius: 24px;
+                    outline: none;
+                    margin-bottom: 25px;
+                }
+                .search-box:hover ,.search-box:focus {
+                    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+                    border-color: rgba(223,225,229,0);
+                }
+                .btn {
+                    background-color: #f8f9fa;
+                    border: 1px solid #f8f9fa;
+                    border-radius: 4px;
+                    color: #3c4043;
+                    font-size: 14px;
+                    padding: 0 16px;
+                    height: 36px;
+                    cursor: pointer;
+                }
+                .btn:hover {
+                    border: 1px solid #dadce0;
+                    color:#202124;
+                }
+        </style>
     </head>
     <body>
-        <div style="text-align:right; padding: 15px;">
+        <div class="nav-links">
             <a href="index.html">Google Search</a>
         </div>
-        <div style="text-align:center; margin-top:100px;">
-            <h1 style="color:#4285F4;">Google Images</h1>
-            <form action="https://www.google.com/search" method="get">
-                <input type="text" name="q">
+        <div class="search-container">
+            <div class="logo">
+                <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+            </div>
+            <div class="sub-text">images</div>
+            <form action="https://www.google.com/search">
+                <input type="text" name="q" class="search-box" autocomplete="off" required>
                 <input type="hidden" name="tbm" value="isch">
-                <input type="submit" value="Google Images">
+                <br>
+                <center>
+                    <input type="submit" value="Google Images" class="btn">
+                </center>
             </form>
         </div>
     </body>
