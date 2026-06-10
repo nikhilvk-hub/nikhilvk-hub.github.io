@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Advanced Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google Advanced Search</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links{
+                display:flex;
+                justify-content: flex-end;
+                padding: 15px 20px;
+            }
+            .nav-links a {
+                text-decoration: none;
+                color: rgba(0,0,0,0.87);
+                font-size: 13px;
+            }
+            .nav-links a:hover {
+                text-decoration: underline;
+            }
+            .header {
+                color: #d93025;
+                font-size: 20px;
+                padding: 20px 40px;
+                border-bottom: 1px solid #ebebeb;
+            }
+            .form-container {
+                padding: 40px;
+                max-width: 800px;
+            }
+            .form-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .form-group label {
+                width: 220px;
+                font-size: 14px;
+                color:#333;
+            }
+            .form-group input {
+                width: 400px;
+                padding: 6px;
+                font-size: 14px;
+                border: 1px solid #d9d9d9;
+            }
+            .form-group input:focus {
+                border:1px solid #4d90fe;
+            }
+            .btn-container {
+                display: flex;
+                justify-content: flex-end;
+                width: 620px;
+                margin-top: 30px;
+            }
+            .btn-advanced {
+                background-color: #4d90fe;
+                border: 1px solid #3079ed;
+                color: #fff;
+                font-size:12px;
+                font-weight: bold;
+                height: 30px;
+                padding: 0 12px;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .btn-advanced:hover {
+                background-color: #357ae8;
+                border-color: #2f5bb7;
+            }
+            </style>
     </head>
     <body>
-        <div style="text-align:right; padding: 15px;">
+        <div class="nav-links">
             <a href="index.html">Google Search</a>
         </div>
-        <div style="padding:40px;">
-            <h2 style="color:#d93025;">Google Advanced Search</h2>
-            <hr>
-            <br>
+        <div class="header">
+            Advanced Search
+        </div>
+        <div class="form-container">
             <form action="https://www.google.com/search">
-               <div style="margin-bottom: 15px;">
-                <label style="display: inline-block; width: 200px;">All these words:</label>
+               <div class="form-group">
+                <label>All these words:</label>
                 <input type="text" name="as_q">
                 </div>
-                <div style="margin-bottom: 15px;">
-                <label style="display: inline-block; width: 200px;">This exact word or phrase:</label>
+                <div class="form-group">
+                <label>This exact word or phrase:</label>
                 <input type="text" name="as_epq">
                 </div>
-                <div style="margin-bottom: 15px;">
-                <label style="display: inline-block; width: 200px;">Any of these words:</label>
+                <div class="form-group">
+                <label>Any of these words:</label>
                 <input type="text" name="as_oq">
                 </div>
-                <div style="margin-bottom: 15px;">
-                    <label style="display: inline-block; width: 200px;">None of these words:</label>
+                <div class="form-group">
+                    <label>None of these words:</label>
                     <input type="text" name="as_eq">
                 </div>
-                <br>
-                <input type="submit" value="Advanced Search" style="background-color:#357ae8; color:white; border:none; padding:8px 15px; cursor: pointer;">
+                <div class="btn-container">
+                    <input type="submit" value="Advanced Search" class="btn-advanced">
+                </div>
             </form>
-        </div>"
+        </div>
     </body>
 </html>
